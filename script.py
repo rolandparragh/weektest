@@ -12,5 +12,5 @@ for week in range(1, 53):
     else:
         markdown_content += f"| {week} | Oncall name | Contact details| \n"
 
-        with open("table.md" "w") as f:
+        with open("table.md", "w") as f:
             f.write(markdown_content)
