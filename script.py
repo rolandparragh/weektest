@@ -8,7 +8,7 @@ markdown_content = f"""\
 """
 for week in range(1, 53):
     if week == current_week:
-        markdown_content += f"|**{week}** | XYZ | @I584002 |\n"
+        markdown_content += f"| **{week}** | XYZ | @I584002 |\n"
     else:
         markdown_content += f"| {week} | Oncall name | Contact details| \n"
 
