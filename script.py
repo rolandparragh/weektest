@@ -3,39 +3,21 @@ import datetime
 # Calculate the current week
 current_week = datetime.date.today().isocalendar()[1]
 
-# Initialize the HTML content
-html_content = f"""\
-<table>
-  <tr>
-    <th>Week</th>
-    <th>Name</th>
-    <th>Contact details</th>
-  </tr>
+# Initialize the Markdown content
+markdown_content = f"""\
+| Week | Name | Contact details |
+| ---- | ---- | --------------- |
 """
 
 # Loop through the weeks (1 to 52)
 for week in range(1, 53):
     if week == current_week:
-        # Highlight the entire row with a yellow background
-        html_content += f"""\
-  <tr style="background-color: yellow;">
-    <td><strong>{week}</strong></td>
-    <td><strong>XYZ</strong></td>
-    <td><strong>@I584002</strong></td>
-  </tr>
-"""
+        # Indicate the current week with "Current" or any label you prefer
+        markdown_content += f"| **Current** (Week {week}) | XYZ | @I584002 |\n"
     else:
-        # For other weeks, specify on-call name and contact details
-        html_content += f"""\
-  <tr>
-    <td>{week}</td>
-    <td>Oncall name</td>
-    <td>Contact details</td>
-  </tr>
-"""
-
-html_content += "</table>"
+        # For other weeks, you can specify on-call name and contact details
+        markdown_content += f"| {week} | Oncall name | Contact details |\n"
 
 # Write the content to the Markdown file
 with open("table.md", "w") as f:
-    f.write(html_content)
+    f.write(markdown_content)
