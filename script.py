@@ -21,3 +21,4 @@ for week in range(1, 53):
 # Write the content to the Markdown file
 with open("table.md", "w") as f:
     f.write(markdown_content)
+print('completed') 
