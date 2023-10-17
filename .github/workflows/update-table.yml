@@ -2,7 +2,7 @@ name: Update Table
 
 on:
   schedule:
-    - cron: "44 0 * * *"  # Run every Sunday at midnight
+    - cron: "47 2 * * *"  # Run every Sunday at midnight
 
 jobs:
   update-table:
