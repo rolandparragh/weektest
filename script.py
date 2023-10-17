@@ -12,8 +12,8 @@ markdown_content = f"""\
 # Loop through the weeks (1 to 52)
 for week in range(1, 53):
     if week == current_week:
-        # Highlight the current week and the entire row with a yellow background
-        markdown_content += f"| <span style='background-color: yellow'>**{week}**</span> | <span style='background-color: yellow'>XYZ</span> | <span style='background-color: yellow'>@I584002</span> |\n"
+        # Highlight the current week using a colored square emoji
+        markdown_content += f"| :large_orange_diamond: **{week}** | :large_orange_diamond: XYZ | :large_orange_diamond: @I584002 |\n"
     else:
         # For other weeks, you can specify on-call name and contact details
         markdown_content += f"| {week} | Oncall name | Contact details |\n"
