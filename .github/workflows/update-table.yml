@@ -1,23 +1,24 @@
 name: Update Table
 
-on: 
-  schedule: 
-    - cron: "0 0 * * 0"
-    
-jobs: 
-  update-table: 
+on:
+  schedule:
+    - cron: "0 0 * * 0"  
+
+jobs:
+  update-table:
     runs-on: ubuntu-latest
-    
-    steps: 
+
+    steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: 3.x
-    - name: Run Python Script
+
+    - name: Run Python script
       run: |
-        python script.py
+        python update_table.py
       env:
-        GITHUB:TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
