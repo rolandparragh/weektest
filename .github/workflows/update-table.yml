@@ -1,8 +1,7 @@
 name: Update Table
 
 on:
-  schedule:
-    - cron: "47 2 * * *"  # Run every Sunday at midnight
+  push
 
 jobs:
   update-table:
