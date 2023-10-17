@@ -12,8 +12,8 @@ markdown_content = f"""\
 # Loop through the weeks (1 to 52)
 for week in range(1, 53):
     if week == current_week:
-        # Highlight the current week using a colored square emoji
-        markdown_content += f"| :large_orange_diamond: **{week}** | :large_orange_diamond: XYZ | :large_orange_diamond: @I584002 |\n"
+        # Indicate the current week with "Current" or any label you prefer
+        markdown_content += f"| **Current** (Week {week}) | XYZ | @I584002 |\n"
     else:
         # For other weeks, you can specify on-call name and contact details
         markdown_content += f"| {week} | Oncall name | Contact details |\n"
